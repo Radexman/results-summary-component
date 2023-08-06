@@ -8,7 +8,7 @@
 }
 
 .results-section {
-	@apply -mt-8 flex w-full flex-col items-center justify-center space-y-4 rounded-b-4xl bg-gradient-to-b from-gradient-lightSlateBlue to-gradient-lightRoyalBlue p-10 text-center md:mt-0  md:w-1/2 md:rounded-4xl;
+	@apply -mt-28 flex w-full flex-col items-center justify-center space-y-4 rounded-b-4xl bg-gradient-to-b from-gradient-lightSlateBlue to-gradient-lightRoyalBlue p-10 text-center md:mt-0 md:w-1/2 md:rounded-4xl;
 }
 
 .rounded-rating {
