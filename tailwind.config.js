@@ -33,6 +33,9 @@ module.exports = {
 					persianBlue: 'hsla(241, 72%, 46%, 0)',
 				},
 			},
+			borderRadius: {
+				'4xl': '2rem',
+			}
 		},
 	},
 	plugins: [],

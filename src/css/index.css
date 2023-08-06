@@ -2,3 +2,15 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.card-component {
+	@apply flex w-full flex-col items-center justify-center rounded-none shadow-none md:max-w-2xl md:flex-row md:rounded-4xl md:shadow-2xl;
+}
+
+.results-section {
+	@apply -mt-8 flex w-full flex-col items-center justify-center space-y-4 rounded-b-4xl bg-gradient-to-b from-gradient-lightSlateBlue to-gradient-lightRoyalBlue p-10 text-center md:mt-0  md:w-1/2 md:rounded-4xl;
+}
+
+.rounded-rating {
+	@apply h-40 w-40 rounded-full bg-gradient-to-b from-gradient-violetBlue to-gradient-persianBlue p-12;
+}

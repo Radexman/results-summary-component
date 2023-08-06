@@ -532,8 +532,8 @@ video {
   min-height: 100vh;
 }
 
-.flex-col{
-  flex-direction: column;
+.w-full{
+  width: 100%;
 }
 
 .items-center{
@@ -544,69 +544,129 @@ video {
   justify-content: center;
 }
 
-.bg-neutral-darkGrayBlue{
+.bg-neutral-white{
   --tw-bg-opacity: 1;
-  background-color: hsl(224 30% 27% / var(--tw-bg-opacity));
+  background-color: hsl(0 0% 100% / var(--tw-bg-opacity));
 }
 
-.bg-neutral-lightLavender{
-  --tw-bg-opacity: 1;
-  background-color: hsl(241 100% 89% / var(--tw-bg-opacity));
+.p-10{
+  padding: 2.5rem;
 }
 
-.bg-neutral-paleBlue{
-  --tw-bg-opacity: 1;
-  background-color: hsl(221 100% 96% / var(--tw-bg-opacity));
+.pb-4{
+  padding-bottom: 1rem;
 }
 
-.bg-gradient-lightSlateBlue{
-  --tw-bg-opacity: 1;
-  background-color: hsl(252 100% 67% / var(--tw-bg-opacity));
+.text-2xl{
+  font-size: 1.5rem;
+  line-height: 2rem;
 }
 
-.bg-gradient-lightRoyalBlue{
-  --tw-bg-opacity: 1;
-  background-color: hsl(241 81% 54% / var(--tw-bg-opacity));
+.text-5xl{
+  font-size: 3rem;
+  line-height: 1;
 }
 
-.bg-gradient-violetBlue{
-  background-color: hsla(254, 72%, 46%, 1);
+.text-lg{
+  font-size: 1.125rem;
+  line-height: 1.75rem;
 }
 
-.bg-gradient-persianBlue{
-  background-color: hsla(241, 72%, 46%, 0);
+.text-sm{
+  font-size: 0.875rem;
+  line-height: 1.25rem;
 }
 
-.bg-gradient-to-b{
+.font-bold{
+  font-weight: 700;
+}
+
+.text-neutral-lightLavender{
+  --tw-text-opacity: 1;
+  color: hsl(241 100% 89% / var(--tw-text-opacity));
+}
+
+.text-neutral-white{
+  --tw-text-opacity: 1;
+  color: hsl(0 0% 100% / var(--tw-text-opacity));
+}
+
+.card-component{
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0px;
+  --tw-shadow: 0 0 #0000;
+  --tw-shadow-colored: 0 0 #0000;
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
+@media (min-width: 768px){
+  .card-component{
+    max-width: 42rem;
+    flex-direction: row;
+    border-radius: 2rem;
+    --tw-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.25);
+    --tw-shadow-colored: 0 25px 50px -12px var(--tw-shadow-color);
+    box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+  }
+}
+
+.results-section{
+  margin-top: -2rem;
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.results-section > :not([hidden]) ~ :not([hidden]){
+  --tw-space-y-reverse: 0;
+  margin-top: calc(1rem * calc(1 - var(--tw-space-y-reverse)));
+  margin-bottom: calc(1rem * var(--tw-space-y-reverse));
+}
+
+.results-section{
+  border-bottom-right-radius: 2rem;
+  border-bottom-left-radius: 2rem;
   background-image: linear-gradient(to bottom, var(--tw-gradient-stops));
-}
-
-.from-gradient-lightSlateBlue{
   --tw-gradient-from: hsl(252, 100%, 67%) var(--tw-gradient-from-position);
   --tw-gradient-to: hsl(252 100% 67% / 0) var(--tw-gradient-to-position);
   --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+  --tw-gradient-to: hsl(241, 81%, 54%) var(--tw-gradient-to-position);
+  padding: 2.5rem;
+  text-align: center;
 }
 
-.from-gradient-lightRoyalBlue{
-  --tw-gradient-from: hsl(241, 81%, 54%) var(--tw-gradient-from-position);
-  --tw-gradient-to: hsl(241 81% 54% / 0) var(--tw-gradient-to-position);
-  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+@media (min-width: 768px){
+  .results-section{
+    margin-top: 0px;
+    width: 50%;
+    border-radius: 2rem;
+  }
 }
 
-.from-gradient-violetBlue{
+.rounded-rating{
+  height: 10rem;
+  width: 10rem;
+  border-radius: 9999px;
+  background-image: linear-gradient(to bottom, var(--tw-gradient-stops));
   --tw-gradient-from: hsla(254, 72%, 46%, 1) var(--tw-gradient-from-position);
   --tw-gradient-to: hsla(254, 72%, 46%, 0) var(--tw-gradient-to-position);
   --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
-}
-
-.to-gradient-lightRoyalBlue{
-  --tw-gradient-to: hsl(241, 81%, 54%) var(--tw-gradient-to-position);
-}
-
-.to-gradient-lightSlateBlue{
-  --tw-gradient-to: hsl(252, 100%, 67%) var(--tw-gradient-to-position);
-}
-
-.to-gradient-persianBlue{
   --tw-gradient-to: hsla(241, 72%, 46%, 0) var(--tw-gradient-to-position);
+  padding: 3rem;
+}
+
+@media (min-width: 768px){
+  .md\:mt-0{
+    margin-top: 0px;
+  }
+
+  .md\:w-1\/2{
+    width: 50%;
+  }
 }
