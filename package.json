@@ -1,7 +1,7 @@
 {
-	"name": "modern-javascript-web-dev-enviroment",
+	"name": "results-summary-component",
 	"version": "1.0.0",
-	"description": "This project boilerplate was created for instant jump into development without need to worry about setting everything up from scratch, it is framework agnostic.",
+	"description": "Frontend Mentor challange component with dynamic JSON data.",
 	"main": "index.js",
 	"scripts": {
 		"build": "tailwindcss -i src/css/index.css -o dist/css/main.css",
