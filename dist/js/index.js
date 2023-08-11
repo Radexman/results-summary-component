@@ -1,8 +1,14 @@
 "use strict";
+const loadingScreen = document.getElementById('loading-screen');
 // Fetching JSON Data
 const fetchData = async () => {
+    // Show loading screen
+    loadingScreen.classList.toggle('hidden');
+    // Fetch data
     const res = await fetch('./data.json');
     const data = await res.json();
+    // Hide loading screen
+    loadingScreen.classList.toggle('hidden');
     createStats(data);
 };
 // Render output
@@ -43,7 +49,7 @@ const createStats = (data) => {
         statMax.classList.add('text-neutral-darkGrayBlue');
         statMax.textContent = ' / 100';
         innerDivTwo.appendChild(statMax);
-        statsContainer?.appendChild(wrapperDiv);
+        statsContainer.appendChild(wrapperDiv);
     });
 };
 // Function for conditional styling summary categories

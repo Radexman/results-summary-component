@@ -1,14 +1,23 @@
+const loadingScreen = document.getElementById('loading-screen')!;
+
 // Fetching JSON Data
 const fetchData = async () => {
+	// Show loading screen
+	loadingScreen.classList.toggle('hidden');
+
+	// Fetch data
 	const res = await fetch('./data.json');
 	const data = await res.json();
+
+	// Hide loading screen
+	loadingScreen.classList.toggle('hidden');
 
 	createStats(data);
 };
 
 // Render output
 const createStats = (data: StatObj[]) => {
-	const statsContainer = document.getElementById('stats-container');
+	const statsContainer = document.getElementById('stats-container')!;
 	const totalPointsEl = document.getElementById('total-points')!;
 
 	let total =
@@ -40,7 +49,6 @@ const createStats = (data: StatObj[]) => {
 
 		// Conditional Styling
 		conditionalStyling(stat.category, statName);
-
 		innerDivOne.appendChild(statName);
 
 		// Flex Item Two
@@ -58,7 +66,7 @@ const createStats = (data: StatObj[]) => {
 		statMax.textContent = ' / 100';
 		innerDivTwo.appendChild(statMax);
 
-		statsContainer?.appendChild(wrapperDiv);
+		statsContainer.appendChild(wrapperDiv);
 	});
 };
 

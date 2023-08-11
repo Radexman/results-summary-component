@@ -26,3 +26,32 @@
 .cta-button {
 	@apply mt-6 w-full rounded-full bg-neutral-darkGrayBlue py-3 text-center font-semibold text-neutral-white transition-colors duration-200 hover:bg-gradient-to-r hover:from-gradient-lightSlateBlue hover:to-gradient-lightRoyalBlue active:scale-95;
 }
+
+svg {
+	z-index: 20;
+}
+
+#loading-screen {
+	position: fixed;
+	z-index: 10;
+	height: 15em;
+	width: 15em;
+	overflow: show;
+	margin: auto;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+}
+
+#loading-screen:before {
+	content: '';
+	display: block;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: radial-gradient(rgba(42, 32, 126, 0.8), rgba(0, 0, 0, 0.8));
+	background: -webkit-radial-gradient(rgba(45, 71, 156, 0.8), rgba(0, 0, 0, 0.8));
+}
