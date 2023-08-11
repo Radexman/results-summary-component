@@ -63,7 +63,7 @@ const conditionalStyling = (itemCategory, DOMElement) => {
             color = 'hsl(234, 85%, 45%)';
             break;
         default:
-            color = 'text-slate-800';
+            color = '#000';
     }
     DOMElement.style.color = color;
 };
