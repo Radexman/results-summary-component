@@ -52,7 +52,7 @@ const createStats = (data: object[]) => {
 	});
 };
 
-const conditionalStyling = (itemCategory: string, DOMElement: HTMLHeadingElement) => {
+const conditionalStyling = (itemCategory: string, DOMElement: HTMLHeadingElement): void => {
 	let color;
 
 	switch (itemCategory) {

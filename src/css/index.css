@@ -8,7 +8,7 @@
 }
 
 .results-section {
-	@apply -mt-28 flex w-full flex-col items-center justify-center space-y-4 rounded-b-4xl bg-gradient-to-b from-gradient-lightSlateBlue to-gradient-lightRoyalBlue p-10 text-center md:mt-0 md:w-1/2 md:rounded-4xl;
+	@apply -mt-10 flex w-full flex-col items-center justify-center space-y-4 rounded-b-4xl bg-gradient-to-b from-gradient-lightSlateBlue to-gradient-lightRoyalBlue p-16 text-center md:mt-0 md:w-1/2 md:rounded-4xl;
 }
 
 .rounded-rating {
@@ -21,4 +21,8 @@
 
 .inner-div-one {
 	@apply flex gap-2;
+}
+
+.cta-button {
+	@apply mt-6 w-full rounded-full bg-neutral-darkGrayBlue py-3 text-center font-semibold text-neutral-white transition-colors duration-200 hover:bg-gradient-to-r hover:from-gradient-lightSlateBlue hover:to-gradient-lightRoyalBlue active:scale-95;
 }

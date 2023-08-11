@@ -634,7 +634,7 @@ video {
 }
 
 .results-section{
-  margin-top: -7rem;
+  margin-top: -2.5rem;
   display: flex;
   width: 100%;
   flex-direction: column;
@@ -656,7 +656,7 @@ video {
   --tw-gradient-to: hsl(252 100% 67% / 0) var(--tw-gradient-to-position);
   --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
   --tw-gradient-to: hsl(241, 81%, 54%) var(--tw-gradient-to-position);
-  padding: 2.5rem;
+  padding: 4rem;
   text-align: center;
 }
 
@@ -697,6 +697,37 @@ video {
 .inner-div-one{
   display: flex;
   gap: 0.5rem;
+}
+
+.cta-button{
+  margin-top: 1.5rem;
+  width: 100%;
+  border-radius: 9999px;
+  --tw-bg-opacity: 1;
+  background-color: hsl(224 30% 27% / var(--tw-bg-opacity));
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+  text-align: center;
+  font-weight: 600;
+  --tw-text-opacity: 1;
+  color: hsl(0 0% 100% / var(--tw-text-opacity));
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 200ms;
+}
+
+.cta-button:hover{
+  background-image: linear-gradient(to right, var(--tw-gradient-stops));
+  --tw-gradient-from: hsl(252, 100%, 67%) var(--tw-gradient-from-position);
+  --tw-gradient-to: hsl(252 100% 67% / 0) var(--tw-gradient-to-position);
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+  --tw-gradient-to: hsl(241, 81%, 54%) var(--tw-gradient-to-position);
+}
+
+.cta-button:active{
+  --tw-scale-x: .95;
+  --tw-scale-y: .95;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
 @media (min-width: 768px){
