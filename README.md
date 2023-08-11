@@ -7,8 +7,3 @@ Frontend Mentor challange component made with Tailwind CSS framweork.
 -   Tailwind Css
 -   Typesctipy
 -   ESLint
-
-## **TODO**
-
--   Loading Screen
--   Calculate total points
