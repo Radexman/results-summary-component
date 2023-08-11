@@ -7,8 +7,18 @@ const fetchData = async () => {
 };
 
 // Render output
-const createStats = (data: object[]) => {
+const createStats = (data: StatObj[]) => {
 	const statsContainer = document.getElementById('stats-container');
+	const totalPointsEl = document.getElementById('total-points')!;
+
+	let total =
+		data.reduce((acc, cur) => {
+			return acc + cur.score;
+		}, 0) / data.length;
+
+	total = +total.toFixed(0);
+
+	totalPointsEl.innerText = total.toString();
 
 	data.forEach((stat: StatObj) => {
 		// Wrapper Div
@@ -40,7 +50,7 @@ const createStats = (data: object[]) => {
 
 		// Flex Item Two Content
 		const statScore = document.createElement('span');
-		statScore.textContent = stat.score;
+		statScore.textContent = stat.score.toString();
 		innerDivTwo.appendChild(statScore);
 
 		const statMax = document.createElement('span');
@@ -52,6 +62,7 @@ const createStats = (data: object[]) => {
 	});
 };
 
+// Function for conditional styling summary categories
 const conditionalStyling = (itemCategory: string, DOMElement: HTMLHeadingElement): void => {
 	let color;
 
@@ -81,4 +92,4 @@ type StatObj = {
 	icon: string;
 };
 
-fetchData();
+window.addEventListener('DOMContentLoaded', fetchData);

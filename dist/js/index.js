@@ -8,6 +8,12 @@ const fetchData = async () => {
 // Render output
 const createStats = (data) => {
     const statsContainer = document.getElementById('stats-container');
+    const totalPointsEl = document.getElementById('total-points');
+    let total = data.reduce((acc, cur) => {
+        return acc + cur.score;
+    }, 0) / data.length;
+    total = +total.toFixed(0);
+    totalPointsEl.innerText = total.toString();
     data.forEach((stat) => {
         // Wrapper Div
         const wrapperDiv = document.createElement('div');
@@ -31,7 +37,7 @@ const createStats = (data) => {
         wrapperDiv.appendChild(innerDivTwo);
         // Flex Item Two Content
         const statScore = document.createElement('span');
-        statScore.textContent = stat.score;
+        statScore.textContent = stat.score.toString();
         innerDivTwo.appendChild(statScore);
         const statMax = document.createElement('span');
         statMax.classList.add('text-neutral-darkGrayBlue');
@@ -40,6 +46,7 @@ const createStats = (data) => {
         statsContainer?.appendChild(wrapperDiv);
     });
 };
+// Function for conditional styling summary categories
 const conditionalStyling = (itemCategory, DOMElement) => {
     let color;
     switch (itemCategory) {
@@ -60,5 +67,5 @@ const conditionalStyling = (itemCategory, DOMElement) => {
     }
     DOMElement.style.color = color;
 };
-fetchData();
+window.addEventListener('DOMContentLoaded', fetchData);
 //# sourceMappingURL=index.js.map
