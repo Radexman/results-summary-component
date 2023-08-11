@@ -14,3 +14,7 @@
 .rounded-rating {
 	@apply h-40 w-40 rounded-full bg-gradient-to-b from-gradient-violetBlue to-gradient-persianBlue p-12;
 }
+
+.single-stat {
+	@apply flex w-full items-center justify-between rounded-lg bg-neutral-paleBlue p-4 text-sm font-semibold;
+}
